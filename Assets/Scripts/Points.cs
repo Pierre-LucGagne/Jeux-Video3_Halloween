@@ -25,6 +25,7 @@ public class Points : MonoBehaviour
     {
         if(other.tag == "grab"){
             nbPoint++;
+            other.gameObject.SetActive(false);
         }
     }
 }
