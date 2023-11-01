@@ -9,6 +9,8 @@ public class Points : MonoBehaviour
 
     [SerializeField] private TMP_Text champPoint;
 
+    [SerializeField] private AudioSource sons;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +28,7 @@ public class Points : MonoBehaviour
         if(other.tag == "grab"){
             nbPoint++;
             other.gameObject.SetActive(false);
+            sons.Play();
         }
     }
 }
